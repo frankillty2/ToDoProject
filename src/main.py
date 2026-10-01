@@ -14,3 +14,8 @@ def delete_task(number):
 add_task("Вивчити Git")
 add_task("Створити репозиторій")
 show_tasks()
+
+def search_task(keyword):
+    found = [task for task in tasks if keyword.lower() in task.lower()]
+    for task in found:
+        print(f"Знайдено: {task}")
